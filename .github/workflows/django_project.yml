@@ -1,0 +1,16 @@
+name: Python application
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build Project 
+      run: |
+        docker-compose up -d
+    - name: Lint with flake8
+      run: |
+        docker-compose run web bash -c "pip install -r requirements-dev.txt && flake8 ."
