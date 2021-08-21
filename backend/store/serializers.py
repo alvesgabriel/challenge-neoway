@@ -6,9 +6,10 @@ from .models import File, Sale
 class FileSerializer(serializers.ModelSerializer):
     class Meta:
         model = File
-        fields = '__all__'
+        fields = "__all__"
+
 
 class SaleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sale
-        fields = '__all__'
+        fields = "__all__"

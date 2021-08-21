@@ -51,7 +51,7 @@ def to_str(function):
 
 @to_str
 def digits(value):
-    return re.sub("\D", "", value) or None
+    return re.sub(r"\D", "", value) or None
 
 
 @to_str
