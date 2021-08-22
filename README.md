@@ -28,7 +28,7 @@ docker-compose up
 _Obs: database migrations were generate by Django command `python manage.py makemigration`_
 
 <p align=center>
-    <b><i>ER Diagram</i></b>
+    <b><i>ER Diagram</i></b><br />
     <img src="documentation/er-diagram.png" title="ER Diagram" alt="ER Diagram"><br />
 </p>
 
