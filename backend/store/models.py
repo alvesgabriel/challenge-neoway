@@ -6,6 +6,9 @@ class File(models.Model):
     created_at = models.DateTimeField(null=True, auto_now_add=True)
     updated_at = models.DateTimeField(null=True, auto_now=True)
 
+    class Meta:
+        ordering = ("id",)
+
 
 class Sale(models.Model):
     file = models.ForeignKey(File, on_delete=models.DO_NOTHING)
@@ -24,3 +27,6 @@ class Sale(models.Model):
     invalid_buyer_doc = models.BooleanField()
     invalid_seller_doc = models.BooleanField()
     invalid_seller_doc_most_frequency = models.BooleanField()
+
+    class Meta:
+        ordering = ("id",)
