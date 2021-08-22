@@ -19,8 +19,14 @@ _Obs: To execute the project [docker](https://docs.docker.com/engine/install/) a
 
 After `git clone` or downlod project, execute this command in terminal to install dependences, make migrations database and run the project.
 
+**Start application**
 ```bash
-docker-compose up
+docker-compose up -d
+```
+
+**Execute database migrations**
+```bash
+docker-compose exec web python manage.py migrate
 ```
 
 ## Database
